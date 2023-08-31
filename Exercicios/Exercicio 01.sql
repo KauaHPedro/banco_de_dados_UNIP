@@ -75,7 +75,7 @@ SELECT a.nome, a.cpf, a.rg, c.descricao, b.descricao FROM
 tb_funcionario a
 INNER JOIN tb_escolaridade b ON a.id_escolaridade = b.id_escolaridade
 INNER JOIN tb_funcao c ON a.id_funcao = c.id_funcao
-WHERE c.salario > 4500.00 OR a.id_funcao = 2 AND
+WHERE (c.salario > 4500.00 OR a.id_funcao = 2) AND
 a.fg_ativo = 1 AND b.fg_ativo = 1 AND c.fg_ativo = 1
 ORDER BY 5;
 
